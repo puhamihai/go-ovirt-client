@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	ovirtclient "github.com/ovirt/go-ovirt-client/v3"
+	ovirtclient "github.com/puhamihai/go-ovirt-client/v3"
 )
 
 func TestTagCreation(t *testing.T) {

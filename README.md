@@ -18,7 +18,7 @@ package main
 import (
 	"crypto/x509"
 
-	ovirtclient "github.com/ovirt/go-ovirt-client/v3"
+	ovirtclient "github.com/puhamihai/go-ovirt-client/v3"
 	ovirtclientlog "github.com/ovirt/go-ovirt-client-log/v3"
 )
 
@@ -94,7 +94,7 @@ The ovirtclient.NewMockTestHelper() function can be used to create a test helper
 helper := ovirtclient.NewMockTestHelper(ovirtclientlog.NewNOOPLogger())
 ```
 
-The easiest way to set up the test helper for a live connection is by using environment variables. To do that, you 
+The easiest way to set up the test helper for a live connection is by using environment variables. To do that, you
 can use the `ovirtclient.NewLiveTestHelperFromEnv()` function:
 
 ```go
@@ -122,7 +122,7 @@ import (
 	"os"
 	"testing"
 
-	ovirtclient "github.com/ovirt/go-ovirt-client/v3"
+	ovirtclient "github.com/puhamihai/go-ovirt-client/v3"
 	ovirtclientlog "github.com/ovirt/go-ovirt-client-log/v3"
 )
 
@@ -172,7 +172,7 @@ This library attempts to retry API calls that can be retried if possible. Each f
 - `ovirtclient.AutoRetry()`: this strategy will cancel retries if the error in question is a permanent error. This is enabled by default.
 - `ovirtclient.MaxTries(tries)`: this strategy will abort retries if a maximum number of tries is reached. On complex calls the retries are counted per underlying API call.
 - `ovirtclient.Timeout(duration)`: this strategy will abort retries if a certain time has been elapsed for the higher level call.
-- `ovirtclient.CallTimeout(duration)`: this strategy will abort retries if a certain underlying API call takes longer than the specified duration. 
+- `ovirtclient.CallTimeout(duration)`: this strategy will abort retries if a certain underlying API call takes longer than the specified duration.
 
 ## Mock client
 
@@ -192,7 +192,7 @@ func NewMyoVirtUsingUtility(
         client: client,
     }
 }
-``` 
+```
 
 ## FAQ
 
